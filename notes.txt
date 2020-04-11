@@ -1,0 +1,39 @@
+
+- add board config based on nrf52dk
+
+- leds (changed!)
+    - p0.17 -> led1
+    - p0.18 -> SWO
+    - p0.19 -> led2
+    - p0.20 -> DFU
+    - led_pins in boards/nordic/nrf52dk/src/main.rs need adaptions
+        - leds are active high
+
+- uart (changed!)
+    - p0.05 -> gpio
+    - p0.06 -> TXD
+    - p0.07 -> gpio
+    - p0.08 -> RXD
+
+    - RTS/CTS not connected
+    - are RTS/CTS neccessary in chips/nrf52/src/uart.rs?
+
+- nfc
+    - P0.09 -> NFC1
+    - P0.10 -> NFC2
+
+- lxfo
+    - P0.01 -> XL2
+    - P0.00 -> XL1
+
+- spi (changed!)
+    - P0.12 -> SPI_CLK
+    - P0.13 -> SPI_MOSI
+    - P0.14 -> SPI_MISO
+
+- gpio
+    - gpio_pins in boards/nordic/nrf52dk/src/main.rs need adaptions
+
+- buttons
+    - P0.20 -> DFU
+    - P0.21 -> RESET
